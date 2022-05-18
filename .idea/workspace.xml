@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4f508f3-a28b-464f-8115-289372f6433d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mpi.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BmmMpj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NBmmMpj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/threads-lab4.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BmmMpj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BmmMpj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NBmmMpj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NBmmMpj.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,22 +46,25 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.BmmMpj">
+  <component name="RunManager" selected="Application.NBmmMpj">
     <configuration name="BmmMpj" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="MPJ_HOME" value="C:\mpj" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="BmmMpj" />
       <module name="threads-lab4" />
-      <option name="VM_PARAMETERS" value="-jar $MPJ_HOME$\lib\starter.jar BmmMpj -np 4 2 true" />
+      <option name="VM_PARAMETERS" value="-jar $MPJ_HOME$\lib\starter.jar BmmMpj -np 5 1024 false" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="NBmmMpj" type="Application" factoryName="Application" nameIsGenerated="true">
+      <envs>
+        <env name="MPJ_HOME" value="C:\mpj" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="NBmmMpj" />
       <module name="threads-lab4" />
-      <option name="PROGRAM_PARAMETERS" value="4 true" />
+      <option name="VM_PARAMETERS" value="-jar $MPJ_HOME$\lib\starter.jar NBmmMpj -np 5 1024 false" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

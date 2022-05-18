@@ -1,6 +1,8 @@
 import mpi.*;
 import java.util.Date;
 
+// Blocking send/receive matrix multiplication algorithm using MPJ
+
 public class BmmMpj {
     // mpi-related values
     int taskid;
@@ -17,8 +19,8 @@ public class BmmMpj {
     int extra;                 // extra #rows allocated to some ranks
     int[] offset = new int[1]; // offset in row
     int[] rows = new int[1];   // the actual # rows allocated to each rank
-    int source;
-    int dest;
+    int source;                // source task
+    int dest;                  // destination task
     int mtype;                 // message type (tagFromMaster or tagFromWorker )
     final static int master = 0;
     final static int tagFromMaster = 1;
@@ -94,13 +96,14 @@ public class BmmMpj {
 
         if ( taskid == master ) {
             System.out.println("mpi has started with " + numtasks + " tasks");
-            System.out.println( "size: " + size);
+            System.out.println("size: " + size);
             // I'm a master. Initialize matrices.
             init( size );
-            System.out.println( "array a:" );
-            print( a );
-            System.out.println( "array b:" );
-            print( b );
+
+//            System.out.println( "array a:" );
+//            print( a );
+//            System.out.println( "array b:" );
+//            print( b );
 
             // Construct message components.
             averows = size / numworkers;
@@ -166,7 +169,7 @@ public class BmmMpj {
      * @param args Receive the matrix size and the print option in args[0] and args[1]
      */
     public static void main( String[] args ) throws MPIException {
-        //jar $MPJ_HOME$\lib\starter.jar BmmMpj -np 4 2 true
+        //jar $MPJ_HOME$\lib\starter.jar BmmMpj -np 32 500 true
 
         // Start the MPI library.
         String appArgs[] = MPI.Init(args);
